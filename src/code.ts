@@ -2,7 +2,7 @@ import JSON5 from 'json5';
 
 // This is the entry point for the plugin code environment.
 // It runs in a separate thread from the UI.
-figma.showUI(__html__, { width: 400, height: 600 });
+figma.showUI(__html__, { width: 500, height: 600 });
 
 // Listen for messages from the UI
 figma.ui.onmessage = msg => {

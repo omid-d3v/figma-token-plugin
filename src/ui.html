@@ -5,16 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Token Importer</title>
   <style>
-    body { font-family: sans-serif; padding: 16px; }
-    textarea, input { width: 100%; margin-bottom: 12px; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-    button { padding: 8px 16px; border: none; border-radius: 4px; background: #14B8A6; color: white; cursor: pointer; font-size: 1rem; }
-    button:hover { background: #0F766E; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 16px;
+      color: #14B8A6;
+    }
+    input[type="file"] {
+      display: block;
+      margin: 16px auto;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background: #14B8A6;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #0F766E;
+    }
+    footer {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer a {
+      color: #14B8A6;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h2>Design Token Importer</h2>
-  <input type="file" id="file-input" accept=".json" />
-  <button id="import-btn">Import</button>
+  <div class="container">
+    <h2>Design Token Importer</h2>
+    <input type="file" id="file-input" accept=".json" />
+    <button id="import-btn">Import Tokens</button>
+  </div>
+  <footer>
+    <p>Developed by <a href="https://github.com/omid-d3v" target="_blank">Omid</a> | Version 1.1.0</p>
+  </footer>
   <script>
     document.getElementById('import-btn').onclick = () => {
       const fileInput = document.getElementById('file-input');
